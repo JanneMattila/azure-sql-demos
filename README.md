@@ -1,2 +1,3 @@
-# azure-sql-demos
+# Azure SQL Demos
+
 Azure SQL Demos
