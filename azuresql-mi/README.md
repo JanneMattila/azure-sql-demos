@@ -21,6 +21,12 @@
 
 [Tutorial: Configure replication between two managed instances](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/replication-between-two-instances-configure-tutorial?view=azuresql-mi)
 
+[Bring Your Own Key to Azure SQL Database Managed Instance TDE](https://bradleyschacht.com/bring-your-own-key-to-azure-sql-database-managed-instance-tde/)
+
+[Cross-subscription support for SQL MI database copy and move - GA refresh!](https://techcommunity.microsoft.com/t5/azure-sql-blog/cross-subscription-support-for-sql-mi-database-copy-and-move-ga/ba-p/4016701)
+
+> Jan 22 2024: "_We don't have plans for supporting cross-tenant operations on our short-term roadmap._"
+
 [Copy-only backups](https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/copy-only-backups-sql-server?view=azuresqldb-mi-current)
 
 [Take a COPY_ONLY backup of TDE protected database on Azure SQL Managed Instance](https://techcommunity.microsoft.com/t5/azure-sql-blog/take-a-copy-only-backup-of-tde-protected-database-on-azure-sql/ba-p/643407)
@@ -43,6 +49,24 @@ DBCC SHRINKFILE (<logName>, 1)
 
 -- This should not show any active VLF that is encrypted by thumbprint.
 SELECT * FROM sys.dm_db_log_info
+
+-- From:
+-- https://bradleyschacht.com/bring-your-own-key-to-azure-sql-database-managed-instance-tde/
+SELECT
+	DB_NAME(database_id) AS database_name,
+	encryption_state,
+	CASE encryption_state
+		WHEN 0 THEN 'No Encryption Key Present. Database Not Encrypted.'
+		WHEN 1 THEN 'Database Unencrypted'
+		WHEN 2 THEN 'Database Encryption in Progress'
+		WHEN 3 THEN 'Database Encrypted'
+		WHEN 4 THEN 'Encryption Key Change in Progress'
+		WHEN 5 THEN 'Database Decryption in Progress'
+		WHEN 6 THEN 'Certificate or Key Change in Progress'
+		ELSE 'Unknown Status'
+		END AS encryption_state_descriptoin,
+	encryptor_thumbprint
+FROM sys.dm_database_encryption_keys
 
 -- Take a COPY_ONLY on Azure SQL Managed Instance	
 -- Prerequisite to have write permissions

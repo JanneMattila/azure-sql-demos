@@ -22,7 +22,7 @@ $miAdminSqlPassword = "ChangeThisPassword!!"
 # Set the managed instance service tier, compute level, and license mode
 $edition = "General Purpose"
 $vCores = 4
-$maxStorage = 256
+$maxStorage = 64
 $computeGeneration = "Gen5"
 $license = "LicenseIncluded" #"BasePrice" or LicenseIncluded if you have don't have SQL Server licence that can be used for AHB discount
 $dbname = 'MyDatabase'
