@@ -23,6 +23,10 @@
 
 [Bring Your Own Key to Azure SQL Database Managed Instance TDE](https://bradleyschacht.com/bring-your-own-key-to-azure-sql-database-managed-instance-tde/)
 
+[Download SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
+
+[Move Azure SQL Managed Instance across subnets](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/vnet-subnet-move-instance?view=azuresql&tabs=azure-portal)
+
 [Cross-subscription support for SQL MI database copy and move - GA refresh!](https://techcommunity.microsoft.com/t5/azure-sql-blog/cross-subscription-support-for-sql-mi-database-copy-and-move-ga/ba-p/4016701)
 
 > Jan 22 2024: "_We don't have plans for supporting cross-tenant operations on our short-term roadmap._"
@@ -31,7 +35,7 @@
 
 [Take a COPY_ONLY backup of TDE protected database on Azure SQL Managed Instance](https://techcommunity.microsoft.com/t5/azure-sql-blog/take-a-copy-only-backup-of-tde-protected-database-on-azure-sql/ba-p/643407)
 
-From the above link:
+From the above links:
 
 ```sql
 -- Check if the db is encrypted with TDE:

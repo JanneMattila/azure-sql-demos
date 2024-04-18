@@ -4,7 +4,7 @@ $NSnetworkModels = "Microsoft.Azure.Commands.Network.Models"
 $NScollections = "System.Collections.Generic"
 
 # Set the resource group name and location for your managed instance
-$resourceGroupName = "myResourceGroup-$(Get-Random)"
+$resourceGroupName = "rg-sql-mi$(Get-Random)"
 $location = "eastus2"
 
 # Set the networking values for your managed instance
