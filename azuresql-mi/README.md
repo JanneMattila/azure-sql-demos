@@ -27,6 +27,8 @@
 
 [Move Azure SQL Managed Instance across subnets](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/vnet-subnet-move-instance?view=azuresql&tabs=azure-portal)
 
+[Move Azure SQL Managed Instance across the virtual networks](https://techcommunity.microsoft.com/t5/azure-sql-blog/move-azure-sql-managed-instance-across-the-virtual-networks/ba-p/3672378)
+
 [Cross-subscription support for SQL MI database copy and move - GA refresh!](https://techcommunity.microsoft.com/t5/azure-sql-blog/cross-subscription-support-for-sql-mi-database-copy-and-move-ga/ba-p/4016701)
 
 > Jan 22 2024: "_We don't have plans for supporting cross-tenant operations on our short-term roadmap._"
